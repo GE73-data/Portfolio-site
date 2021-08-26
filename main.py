@@ -1,7 +1,5 @@
-from flask import Flask, render_template
-# import sqlalchemy
-# import pymongo
-# etc., etc., etc.
+from flask import Flask, render_template, jsonify
+from data import column_names
 
 app = Flask(__name__)
 
@@ -17,9 +15,19 @@ def dashboard():
     return render_template('dashboard.html')
 
 
+@app.route('/application')
+def application():
+    return render_template('application.html', column_names=column_names)
+
+
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+
+@app.route('/api/feature_names')
+def feature_names():
+    return jsonify(column_names)
 
 
 @app.errorhandler(404)

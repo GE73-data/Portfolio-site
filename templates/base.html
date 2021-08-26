@@ -14,7 +14,7 @@
 </head>
 
 <!-- Jinja2 stuff related to generating nav and setting active state. Add more pages here! -->
-{% set navigation_bar = [('/', 'Home'), ('/dashboard', 'Dashboard'), ('/about', 'About')] -%}
+{% set navigation_bar = [('/', 'Home'), ('/application', 'Application'), ('/dashboard', 'Dashboard'), ('/about', 'About')] -%}
 {% set active_page = active_page|default('home') -%}
 
 <body style='background-color: #1c1c1c;'>
@@ -59,7 +59,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
-  <script src="{{url_for('static', filename='js/custom.js')}}"></script>
+  <script src="{{url_for('static', filename='js/base.js')}}"></script>
 </body>
 
 </html>

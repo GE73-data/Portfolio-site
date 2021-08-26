@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% set active_page = "Application" %}
+{% block content %}
+
+<div style='margin-top: 30px; text-align: center;'>
+  <h1>Application</h1>
+  <div id='text-input-div'>
+  </div>
+ </div>
+ <script src="{{url_for('static', filename='js/application.js')}}"></script>
+{% endblock %}
